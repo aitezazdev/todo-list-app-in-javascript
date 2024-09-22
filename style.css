@@ -12,13 +12,13 @@ body {
 
 h1 {
     text-align: center;
-    font-size: 48px;
+    font-size: 45px;
     color: #333333;
     margin-bottom: 20px;
 }
 
 #main {
-    width: 40%;
+    width: 500px;
     background-color: #ffffff;
     margin: 50px auto;
     padding: 20px;
@@ -29,13 +29,16 @@ h1 {
 #input-div {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #todo-input {
     padding: 15px;
     outline: none;
-    border: 2px solid #cccccc;
+    border-top: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    border-left: 2px solid #cccccc;
+    border-right: 2px solid transparent;
     background-color: #f8f9fa;
     width: 70%;
     border-top-left-radius: 7px;
@@ -56,6 +59,7 @@ h1 {
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease;
 }
 
@@ -83,7 +87,7 @@ h1 {
     background-color: #f7f7f7;
 }
 
-button {
+.remove-btn {
     background-color: #e74c3c;
     border: none;
     padding: 8px 12px;
@@ -93,6 +97,6 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.remove-btn:hover {
     background-color: #c0392b;
 }
