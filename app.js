@@ -14,3 +14,4 @@ todoBtn.addEventListener("click", function () {
   }
   todoInput.value = "";
 });
+
