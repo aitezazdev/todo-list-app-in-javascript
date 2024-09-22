@@ -1,43 +1,98 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-body{
+body {
     padding: 30px;
+    background-color: #f0f4f8;
 }
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 48px;
+    color: #333333;
+    margin-bottom: 20px;
 }
 
-#main{
+#main {
     width: 40%;
-    background-color: red;
+    background-color: #ffffff;
     margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#input-div{
-    width: 100%;
-    background-color: green;
-    margin: 50px auto;
+#input-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-#todo-input{
-    padding: 12px 20px;
+#todo-input {
+    padding: 15px;
     outline: none;
-    border-style: none;
-    background-color: #e0e0e0;
+    border: 2px solid #cccccc;
+    background-color: #f8f9fa;
     width: 70%;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     font-size: 16px;
-    height: 100%;
+    transition: border 0.3s ease;
 }
 
-#add-todo{
-    padding: 12px 20px;
+#todo-input:focus {
+    border-color: #3498db;
+}
+
+#add-todo {
+    padding: 15px 25px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add-todo:hover {
+    background-color: #2980b9;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+#todo-list li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#todo-list li:nth-child(even) {
+    background-color: #f7f7f7;
+}
+
+button {
+    background-color: #e74c3c;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
 }
