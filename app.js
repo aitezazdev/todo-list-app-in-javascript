@@ -15,3 +15,12 @@ function addTodo() {
   }
   todoInput.value = "";
 }
+
+function addTodoByEnter(event) {
+  if (event.key === "Enter") {
+    addTodo();
+  }
+}
+
+todoBtn.addEventListener("click", addTodo);
+todoInput.addEventListener("keyup", addTodoByEnter);
