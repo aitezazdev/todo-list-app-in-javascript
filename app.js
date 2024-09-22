@@ -7,13 +7,21 @@ function addTodo() {
   if (todoText) {
     var li = document.createElement("li");
     li.innerText = todoText;
+
     var btn = document.createElement("button");
+    btn.addEventListener("click", removeTodo);
     btn.classList.add("remove-btn");
     btn.innerText = "Remove";
+
     li.appendChild(btn);
     todoList.appendChild(li);
   }
   todoInput.value = "";
+}
+
+function removeTodo(event) {
+  var li = event.target.parentElement;
+  todoList.removeChild(li);
 }
 
 function addTodoByEnter(event) {
