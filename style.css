@@ -82,10 +82,15 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 #todo-list li:nth-child(even) {
-  background-color: #f7f7f7;
+    background-color: #f7f7f7;
+}
+
+#todo-list li:hover {
+  background-color: #ebe9e9;
 }
 
 .remove-btn {
@@ -102,6 +107,7 @@ h1 {
   background-color: #c0392b;
 }
 
-.dashed {
+.checked {
   text-decoration: line-through;
+  color: #2980b9;
 }
