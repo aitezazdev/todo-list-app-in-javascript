@@ -4,14 +4,16 @@ var todoList = document.getElementById("todo-list");
 
 function addTodo() {
   var todoText = todoInput.value;
-  if (todoText.trim()) {
+  if (!todoText.trim()) {
+    alert("Task description cannot be empty.");
+  } else {
     var li = document.createElement("li");
     li.innerText = todoText;
-    li.addEventListener("click", toggleDash)
+    li.addEventListener("click", toggleDash);
 
     var btn = document.createElement("button");
     btn.classList.add("remove-btn");
-    btn.innerText = "Remove";
+    btn.innerText = "Delete Task";
     btn.addEventListener("click", removeTodo);
 
     li.appendChild(btn);
@@ -31,7 +33,7 @@ function addTodoByEnter(event) {
   }
 }
 
-function toggleDash(event){
+function toggleDash(event) {
   var li = event.target;
   li.classList.toggle("checked");
 }
